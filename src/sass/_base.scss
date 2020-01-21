@@ -1,10 +1,4 @@
 
-
-/* font 
-font-family: 'Playfair Display SC', serif;
-font-family: 'Spinnaker', sans-serif;
-*/
-
 :root {
     --color-primary: #899a8f;
     --color-primary-light: #d0d5d0;
@@ -12,9 +6,6 @@ font-family: 'Spinnaker', sans-serif;
 
     --color-secondary-light: #7c8055;
     --color-secondary-dark: #716345;
-
-    // --color-tertiary-light:;
-    // --color-tertiary-dark:;
 
     --color-grey-light-1: #f9faf9;
     --color-grey-light-2: #f2f4f2;
@@ -32,6 +23,11 @@ font-family: 'Spinnaker', sans-serif;
 
     --line: 1px solid var(--color-grey-light-2);
 }
+
+
+$bp-large: 75em; //1200px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
 
 * {
     margin: 0;

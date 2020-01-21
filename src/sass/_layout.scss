@@ -6,9 +6,35 @@
     background-position: right bottom;
     width: 100%;
     background-repeat: no-repeat;
+
+    &__title {
+        font-size: 4rem;
+        color: var(--color-primary-dark);
+        position: absolute;
+        top: 23%;
+        left: 37%;
+        transform: translate(-50% , -50%);
+
+        @media only screen and (max-width: $bp-large){
+            top: 20%;
+            left: 34%;
+            transform: translate(-50% , -50%);
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            font-size: 5rem;
+            color: var(--color-white);
+            top: 7.5%;
+            left: 34%;
+            transform: translate(-50% , -50%);
+        }
+
+        
+    }
 }
 
 .header {
+    color: var(--color-primary-light);
     position: fixed;
     font-size: 5rem;
     height: 15vh;
@@ -30,20 +56,25 @@
     min-height: 50rem;
 
     display: flex;
+
+    @media only screen and (max-width: $bp-medium){
+        flex-direction: column;
+    }
 }
 
 .sidebar {
     background-color: var(--color-white);
 
-    flex: 0 0 18%; //grow , shrink , basis
+    flex: 0 0 23%; //grow , shrink , basis
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .books__list {
     background-color: var(--color-white);
-    padding: 1rem;
+    padding: 0 3rem;
 
     display: flex;
     flex-direction: column;
@@ -116,4 +147,14 @@
 .description {
     font-size: 1.3rem;
     flex: 1;
+}
+
+
+#aboutbink {
+    background-color: var(--color-white);
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;  
 }

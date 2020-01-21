@@ -1,7 +1,3 @@
-/* font 
-font-family: 'Playfair Display SC', serif;
-font-family: 'Spinnaker', sans-serif;
-*/
 :root {
   --color-primary: #899a8f;
   --color-primary-light: #d0d5d0;
@@ -46,8 +42,28 @@ body {
   background-position: right bottom;
   width: 100%;
   background-repeat: no-repeat; }
+  .container__title {
+    font-size: 4rem;
+    color: var(--color-primary-dark);
+    position: absolute;
+    top: 23%;
+    left: 37%;
+    transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 75em) {
+      .container__title {
+        top: 20%;
+        left: 34%;
+        transform: translate(-50%, -50%); } }
+    @media only screen and (max-width: 56.25em) {
+      .container__title {
+        font-size: 5rem;
+        color: var(--color-white);
+        top: 7.5%;
+        left: 34%;
+        transform: translate(-50%, -50%); } }
 
 .header {
+  color: var(--color-primary-light);
   position: fixed;
   font-size: 5rem;
   height: 15vh;
@@ -65,17 +81,20 @@ body {
   box-shadow: var(--shadow-dark);
   min-height: 50rem;
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-white);
-  flex: 0 0 18%;
+  flex: 0 0 23%;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
 
 .books__list {
   background-color: var(--color-white);
-  padding: 1rem;
+  padding: 0 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,6 +149,14 @@ body {
   font-size: 1.3rem;
   flex: 1; }
 
+#aboutbink {
+  background-color: var(--color-white);
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; }
+
 .name {
   font-size: 6rem;
   padding: 0 4rem;
@@ -169,8 +196,8 @@ body {
     .search__btn:active {
       transform: translateY(2px); }
   .search__icon {
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     fill: var(--color-grey-light-1); }
 
 .user-nav {
@@ -187,9 +214,12 @@ body {
     .user-nav__icon-box:hover {
       background-color: rgba(0, 0, 0, 0.3); }
   .user-nav__icon {
-    height: 2.25rem;
-    width: 2.25rem;
+    height: 2.5rem;
+    width: 2.5rem;
     fill: var(--color-grey-light-1); }
+    .user-nav__icon:hover {
+      height: 3rem;
+      width: 3rem; }
   .user-nav__notification {
     font-size: .8rem;
     height: 1.75rem;
@@ -213,8 +243,16 @@ body {
   list-style: none;
   margin-top: 3.5rem;
   text-transform: uppercase; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 0; } }
   .side-nav__item {
     position: relative; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
   .side-nav__item::before {
@@ -246,27 +284,41 @@ body {
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__icon {
+        margin-right: 1rem;
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .legal {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   padding: 2.5rem;
-  color: var(--color-primary-dark); }
+  color: var(--color-grey-light-1); }
 
 .books__wrapper {
-  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
-  align-items: center; }
+  align-items: stretch; }
 
 .books__item {
   padding: 1.5rem;
-  margin: 3rem;
+  margin: 2rem;
   font-size: 1.2rem;
   text-align: center;
   flex: 0 0 20%; }
+  @media only screen and (max-width: 75em) {
+    .books__item {
+      flex: 0 0 27%; } }
+  @media only screen and (max-width: 56.25em) {
+    .books__item {
+      margin: 4rem;
+      flex: 0 0 35%; } }
+  @media only screen and (max-width: 37.5em) {
+    .books__item {
+      flex: 0 0 70%; } }
 
 .books__fig {
   width: 100%;
@@ -307,20 +359,27 @@ body {
 .pages {
   display: flex; }
   .pages__btn {
+    color: var(--color-white);
     border: none;
     background-color: var(--color-secondary-light);
-    padding: .5rem 2rem;
+    padding: .7rem 1rem;
     border-radius: 10rem;
     cursor: pointer;
     margin: 1rem;
     display: flex;
     align-items: center;
     transition: all .2s; }
-    .pages__btn:focus, .pages__btn:active {
-      outline: none; }
+    .pages__btn:hover {
+      background-color: var(--color-secondary-dark); }
+    .pages__btn:focus {
+      outline: none;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .pages__btn:active {
+      transform: translateY(0.2rem); }
   .pages__icon {
     height: 1.5rem;
-    width: 1.5rem; }
+    width: 1.5rem;
+    fill: currentColor; }
 
 .overview {
   display: flex;
