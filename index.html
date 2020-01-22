@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./dist/css/style.css">
-    <!-- <link rel="shortcut icon" type="image/png" href="./dist/img/favicon.png"> -->
 
     <title>Bookshop &mdash; Your best book finding app</title>
 </head>
@@ -50,9 +49,63 @@
             </nav>
         </header>
 
-
         <div class="content">
-            <nav class="sidebar">
+            <section class="sidebar">
+                <h2>Filter by</h2>
+                <ul class="filter-block">
+                    <li class="filter-block__item">
+                        <h4>Category</h4>
+                        <ul class="filter-block__category">
+                            <li>
+                                <input type="checkbox" id="checkbox1">
+                                <label for="checkbox1">Social Science</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkbox2">
+                                <label for="checkbox2">Art</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkbox3">
+                                <label for="checkbox3">Literary Fiction</label>
+                            </li>
+                        </ul> 
+                    </li>
+
+                    <li class="filter-block__item">
+                        <h4>Price</h4>
+                        <div class="filter-block__price-slider">
+                            <span>from nt$
+                            <input class="min-price" type="number" value="15" min="0" max="120000"/>  to nt$
+                            <input class="max-price" type="number" value="5000" min="0" max="120000"/>
+                            </span>
+                        </div>
+                    </li> 
+
+                    <li class="filter-block__item">
+                        <h4>Year</h4>
+                        <div class="filter-block__year">
+                            <div class="custom-select">
+                                <div class="custom-select__trigger"><span>Choose a range</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="custom-select__options">
+                                    <span class="custom-select__option custom-select__selected" data-value="tesla">2000s - </span>
+                                    <span class="custom-select__option" data-value="volvo">1950s - 2000s</span>
+                                    <span class="custom-select__option" data-value="mercedes"> - 1950s</span>
+                                </div>
+                                <!-- <select name="selectThis" id="selectThis">
+                                    <option value="">Choose a range</option>
+                                    <option value=".option2">2000s - </option>
+                                    <option value=".option3">1950s - 2000s</option>
+                                    <option value=".option4"> - 1950s</option>
+                                </select> -->
+                            </div>
+                        </div>
+                    </li> 
+                </ul>
+            </section>
+            
+            <!-- <nav class="sidebar">
                 <ul class="side-nav">
                     <li class="side-nav__item side-nav__item--active">
                         <a href="#aboutbink" class="side-nav__link">
@@ -67,7 +120,7 @@
                             <svg class="side-nav__icon">
                                 <use xlink:href="./dist/img/sprite.svg#icon-book"></use>
                             </svg>
-                            <span>shop</span>
+                            <span>book</span>
                         </a>
                     </li>
                     <li class="side-nav__item">
@@ -87,7 +140,7 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
 
             <main class="books__list" id="bookslist">
                 <div class="books__wrapper">
@@ -178,12 +231,12 @@
                     <a href="#books__wrapper" class="overview__close">&times;</a>
                 </div>
 
-                <div class="detail">
-                    <div class="figure">
+                <div class="popup__detail">
+                    <div class="popup__figure">
                         <img src="./dist/img/test-4.jpeg" alt="Test">
                     </div>
 
-                    <div class="description">
+                    <div class="popup__description">
                         <div>
                             <span class="price">$375</span>
                             <button class="btn-inline">view full details</button>
@@ -211,6 +264,6 @@
             </div>
         </div>
 
-    </div>
+    </divli>
 </body>
 </html>

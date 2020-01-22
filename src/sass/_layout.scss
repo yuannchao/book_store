@@ -15,7 +15,7 @@
         left: 37%;
         transform: translate(-50% , -50%);
 
-        @media only screen and (max-width: $bp-large){
+        @media only screen and (max-width: $bp-largest){
             top: 20%;
             left: 34%;
             transform: translate(-50% , -50%);
@@ -37,12 +37,11 @@
     color: var(--color-primary-light);
     position: fixed;
     font-size: 5rem;
-    height: 15vh;
+    height: 10rem;
     background-color: rgba(black, .7);
     border-bottom: 3px double var(--color-white);
     z-index: 1000;
     width: 100%;
-    // color: var(--color-primary-light);
 
     display: flex;
     justify-content: space-between;
@@ -64,11 +63,21 @@
 
 .sidebar {
     background-color: var(--color-white);
+    color: var(--color-grey-dark-2);
+    padding: 1rem;
 
     flex: 0 0 23%; //grow , shrink , basis
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+
+    h2 {
+        color: var(--color-grey-dark-1);
+        margin-bottom: 2rem;
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
 
 }
 
@@ -127,34 +136,26 @@
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
-}
 
 
-.detail {
-    display: flex;
-    padding: 2.5rem;
-}
-
-.figure {
-    flex: 0 0 30%;
-    margin-right: 3.5rem;
-
-    img {
-        height: 30rem;
+    &__detail {
+        display: flex;
+        padding: 2.5rem;
     }
+
+    &__figure {
+        flex: 0 0 30%;
+        margin-right: 3.5rem;
+
+        img {
+            height: 30rem;
+        }
+    }
+
+    &__description {
+        font-size: 1.3rem;
+        flex: 1;
+    }
+
 }
 
-.description {
-    font-size: 1.3rem;
-    flex: 1;
-}
-
-
-#aboutbink {
-    background-color: var(--color-white);
-    padding: 0 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;  
-}
