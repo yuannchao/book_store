@@ -130,12 +130,17 @@
     &:target {
         opacity: 1;
         visibility: visible;
+
+        &__content {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
     }
 
-    &:target &__content {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
+    // &:target &__content {
+    //     opacity: 1;
+    //     transform: translate(-50%, -50%) scale(1);
+    // }
 
 
     &__detail {
